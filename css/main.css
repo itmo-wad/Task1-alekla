@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: visible;
+}
+
+.content {
+	padding: 16px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	margin-top: 100px;
+}
+
+#header {
+	font-family: raleway, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: left;
+	background: #4a4e4d;
+	color: #e6e6ea;
+	height: 50px;
+
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9;
+}
+#header p {
+	display: block;
+	padding: 7px 16px;
+}
+
+#header a, :visited {
+	color: #e6e6ea;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#images img {
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+}
+
+#images {
+	background-color: #eee;
+	margin: 0 auto;
+	position: relative;
+}
+
+#images a {
+	display: inline-block;
+	margin: 10px 10px 0 0;
+}
+
+.container--box .box .spinner {
+	height: 40px;
+	width: 40px;
+	background: rgba(0, 0, 0, .2);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+   	left: 50%;
+}
+
+.container--box .box .spinner--2 {
+	border: 2px solid rgba(0, 0, 0, 0.4);
+	border-top-color: #fff;
+	animation: spinner2 600ms linear infinite;
+}
+
+@keyframes spinner2 {
+	to {
+		transform: rotate(360deg);
+	}
+}
