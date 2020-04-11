@@ -1,7 +1,7 @@
 <html>
 <head>
     <!-- CSS sheets -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 <body>
@@ -9,12 +9,16 @@
     </div>
     <div id="header"><p><a href="">Simple gallery</a></p></div>
     <div class="content">
-        <div id="images"></div>
+        <div id="images">
+             {% for image in images %}
+             <a data-fancybox="gallery" href="static/images/{{ image }}"><img src="static/images/{{ image }}"></a>
+             {% endfor %}
+        </div>
     </div>
 
     <!-- JS scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
 </body>
 </html>
